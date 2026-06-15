@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f5f7f2" />
+    <title>张雪峰快跑</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <audio id="bgm" src="./assets/theme.mp3" loop></audio>
+    <main class="phone-shell" aria-label="张雪峰快跑小游戏">
+      <header class="mini-bar">
+        <button class="chrome-btn close" aria-label="关闭"></button>
+        <h1>张雪峰快跑</h1>
+        <button class="chrome-btn menu" aria-label="更多"></button>
+      </header>
+
+      <section class="game-card" aria-label="游戏区域">
+        <div class="score-strip">
+          <div>
+            <p class="game-name">张雪峰快跑</p>
+            <p class="hint">长按跳更高，按↓蹲下躲雪碧</p>
+          </div>
+          <p class="score-readout">
+            <span id="score">00000</span>
+            <span>HI</span>
+            <span id="hiScore">00000</span>
+          </p>
+        </div>
+
+        <div class="stage-wrap">
+          <canvas id="gameCanvas" width="720" height="300" aria-label="张雪峰正在快跑"></canvas>
+          <div id="startOverlay" class="overlay is-visible">
+            <p class="overlay-title">张雪峰快跑</p>
+            <p class="overlay-copy">你跑不过我你信吗！按空格 / ↑ / 点击再跑一把。</p>
+            <button id="restartBtn" class="restart-btn" type="button">重来</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="touch-controls" aria-label="触控操作">
+        <button id="jumpBtn" class="control-btn jump" type="button">跳跃</button>
+        <button id="duckBtn" class="control-btn duck" type="button">下蹲</button>
+      </section>
+    </main>
+
+    <script src="./game.js"></script>
+  </body>
+</html>
