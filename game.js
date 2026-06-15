@@ -127,9 +127,9 @@ function spawnObstacle() {
   const isTall = roll < 0.32;
   const obstacle = {
     x: W + 34,
-    y: isHigh ? groundY - 120 : groundY - (isTall ? 72 : 54),
-    w: isHigh ? 78 : isTall ? 40 : 48,
-    h: isHigh ? 48 : isTall ? 72 : 54,
+    y: isHigh ? groundY - 114 : groundY - (isTall ? 58 : 48),
+    w: isHigh ? 60 : isTall ? 36 : 40,
+    h: isHigh ? 44 : isTall ? 58 : 48,
     type: isHigh ? "sprite" : "chocobar",
     passed: false,
     variant: isTall ? "tall" : "short",
@@ -766,3 +766,6 @@ function playBgm() {
 }
 document.addEventListener("click", playBgm, { once: true });
 document.addEventListener("keydown", playBgm, { once: true });
+
+document.addEventListener("contextmenu", (e) => e.preventDefault());
+document.addEventListener("selectstart", (e) => e.preventDefault());
